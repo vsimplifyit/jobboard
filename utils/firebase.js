@@ -1,6 +1,6 @@
-import firebase from 'firebase/app';
+import {getApp,getApps,initializeApp} from 'firebase/app';
 import 'firebase/auth';
-import 'firebase/firestore';
+import {getFirestore} from 'firebase/firestore';
 
 var firebaseConfig = {
 	apiKey: `${process.env.NEXT_PUBLIC_Firebase_API_Key}`,
@@ -13,10 +13,10 @@ var firebaseConfig = {
 
 let fire;
 
-if (!firebase.apps.length) {
-	fire = firebase.initializeApp(firebaseConfig);
+if (!getApps.length) {
+	fire = initializeApp(firebaseConfig);
 } else {
-	fire = firebase.app();
+	fire = getApp();
 }
 
 export default fire;
