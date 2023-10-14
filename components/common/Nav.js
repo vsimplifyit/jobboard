@@ -38,8 +38,8 @@ const Nav = () => {
 		<div className={styles.container}>
 			<div className={styles.main_container}>
 				<div className={styles.img_container}>
-					<Link href="/">
-						<a>
+					<Link href="/"  legacyBehavior >
+						<a id="link">
 							<Image
 								src="/logo.png"
 								alt="jobboard"
@@ -52,30 +52,30 @@ const Nav = () => {
 				<div className={styles.links_container}>
 					{!val ? (
 						<>
-							<Link href="/login">
+							<Link href="/login" legacyBehavior >
 								<div className={styles.links}>
-									<a>Login</a>
+									<a id="link">Login</a>
 								</div>
 							</Link>
-							<Link href="/signup">
+							<Link href="/signup" legacyBehavior >
 								<div className={styles.links}>
-									<a>Sign Up</a>
+									<a id="link">Sign Up</a>
 								</div>
 							</Link>
 						</>
 					) : (
 						<>
-							<Link href="/dashboard">
+							<Link href="/dashboard" legacyBehavior >
 								<div className={styles.links}>
-									<a>Dashboard</a>
+									<a id="link">Dashboard</a>
 								</div>
 							</Link>
-							<Link href="/">
+							<Link href="/" legacyBehavior >
 								<div
 									className={styles.links}
 									onClick={handleLogout}
 								>
-									<a>Logout</a>
+									<a id="link">Logout</a>
 								</div>
 							</Link>
 						</>
@@ -84,15 +84,15 @@ const Nav = () => {
 					<div>
 						{val ? (
 							isOrg ? (
-								<Link href="/hire">
-									<a>
+								<Link href="/hire" legacyBehavior >
+									<a id="link">
 										<button>Post a Job</button>
 									</a>
 								</Link>
 							) : null
 						) : (
-							<Link href="/login">
-								<a>
+							<Link href="/login" legacyBehavior >
+								<a id="link">
 									<button>Post a Job</button>
 								</a>
 							</Link>

@@ -161,10 +161,10 @@ const Preview = ({ mainPreview = false }) => {
 			</div>
 			<div className={styles.company}>
 				<h2>About {companyName}</h2>
-				<a href={companyWebsite}>Visit website</a>
+				<Link legacyBehavior><a id="link" href={companyWebsite}>Visit website</a></Link>
 				<br />
 				<br />
-				<a href={`mailto:${companyEmail}`}>Email them</a>
+				<Link legacyBehavior><a id="link" href={`mailto:${companyEmail}`}>Email them</a></Link>
 				<h3>Description</h3>
 				<div className={styles.description}>
 					<p>{companyDescription}</p>
@@ -175,8 +175,8 @@ const Preview = ({ mainPreview = false }) => {
 					<Button label="Post Job" onClick={handlePostJob} />
 				)}
 				{mainPreview && (
-					<Link href={`mailto:${jobLink}`}>
-						<a>
+					<Link legacyBehavior href={`mailto:${jobLink}`}>
+						<a id="link">
 							<Button label="Apply" onClick={handleApply} />
 						</a>
 					</Link>

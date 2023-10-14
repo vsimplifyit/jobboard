@@ -7,8 +7,8 @@ const HelperMsg = ({ content, option, url }) => {
 			<p>
 				{content}{' '}
 				<span>
-					<Link href={`/${url}`}>
-						<a>{option}</a>
+					<Link legacyBehavior href={`/${url}`}>
+						<a id="link">{option}</a>
 					</Link>
 				</span>
 			</p>

@@ -5,7 +5,7 @@ const Footer = () => {
 		<div className={styles.container}>
 			<h3>
 				Made with 💜 by{' '}
-				<a href="https://github.com/msaaddev">Saad Irfan</a>
+				<link href="https://github.com/msaaddev">Saad Irfan</link>
 			</h3>
 		</div>
 	);
